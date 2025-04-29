@@ -6,9 +6,8 @@ function App(){
     <>
     <Router>
       <Routes>
-        <Route path="/" element={<Form/>} />
-        <Route path="/home" element={<Home/>} />
-        <Route path="/contact" element={<h1 className="text-yellow-600">Contact</h1>} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/addfile" element={<Form/>} />
         </Routes>
     </Router>
 
