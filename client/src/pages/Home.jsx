@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     const fetchModels = async () => {
       try {
-        const res = await axios.get('http://localhost:4000/getall');
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/getall`);
         console.log('res :', res);
         setModels(res.data.data);
       } catch (err) {
@@ -50,7 +50,7 @@ const Home = () => {
             </div>
             <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
               <ModelViewer
-                url={`http://localhost:4000/${model.file.replace(/\\/g, '/')}`}
+                url={`${process.env.REACT_APP_BACKEND_URL}/${model.file.replace(/\\/g, '/')}`}
                 className="w-full h-full object-contain"
               />
             </div>

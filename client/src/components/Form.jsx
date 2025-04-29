@@ -39,7 +39,7 @@ const Form = () => {
 
     try {
       let response = await axios.post(
-        "http://localhost:4000/upload",
+        `${process.env.REACT_APP_BACKEND_URL}/upload`,
         formData,
         {
           headers: {
