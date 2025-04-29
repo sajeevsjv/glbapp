@@ -21,6 +21,7 @@ app.use(cors({
     origin: 'https://glbapp-frontend.onrender.com',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
+app.options('*', cors());
 
 app.get("/", (req,res)=>{
     res.send("nice bro, continue");
