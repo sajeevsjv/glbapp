@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ModelViewer from '../components/ModelViewer';
 import { AiOutlineClose } from "react-icons/ai";
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [models, setModels] = useState([]);
   const [selectedModel, setSelectedModel] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchModels = async () => {
@@ -32,7 +34,7 @@ const Home = () => {
     <>
     <nav className='bg-black p-3 flex justify-between items-center'>
         <h1 className="text-3xl font-semibold">GLB Models</h1>
-        <button>+ Add new</button>
+        <button onClick={()=>navigate("/addfile")}>+ Add new</button>
       </nav>
     <div className="p-8">
       {models.length === 0 && <p className="text-lg text-gray-500">No models uploaded.</p>}
