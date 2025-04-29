@@ -39,7 +39,7 @@ const Form = () => {
 
     try {
       let response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/upload`,
+        `https://glbapp.onrender.com/upload`,
         formData,
         {
           headers: {
