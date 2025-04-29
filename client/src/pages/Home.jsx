@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const fetchModels = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/getall`);
+        const res = await axios.get(`https://glbapp.onrender.com/getall`);
         console.log('res :', res);
         setModels(res.data.data);
       } catch (err) {
